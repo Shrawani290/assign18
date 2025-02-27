@@ -1,4 +1,10 @@
-*{
+
+
+
+
+/* CSS - style.css */
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,8 +14,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Centers vertically */
-    background-color: #e5d4d4; /* Dark background */
+    height: 100vh;
+    background-color: #e5d4d4;
 }
 
 .container {
@@ -25,22 +31,21 @@ body {
     background: #000000b1;
     color: bisque;
     padding: 1.5rem 2rem;
-    width: 80%;
+    width: 90%;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    position: relative;
 }
 
 .nav__logo img {
-    max-width: 120px; 
-    margin-left: 2500px;
+    max-width: 100px;
+}
 
-}  
 .nav__links {
     list-style: none;
     display: flex;
     align-items: center;
     gap: 2rem;
-   
 }
 
 .nav__links .link a {
@@ -54,18 +59,36 @@ body {
     color: bisque;
 }
 
-.btn {
-    background-color: bisque;
-    color: black;
+
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
     border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
+    color: white;
     cursor: pointer;
-    transition: 0.3s;
-    margin-right: 1000px;
 }
 
-.btn:hover {
-    background-color: white;
+@media (max-width: 768px) {
+    .nav__links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #000000b1;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .nav__links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
 }
+

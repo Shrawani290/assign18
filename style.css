@@ -40,7 +40,7 @@ body {
     display: flex;
     align-items: center;
     gap: 2rem;
-    margin-right: 4000px;
+    margin-right: 3000px;
 }
 
 .nav__links .link a {
@@ -52,7 +52,7 @@ body {
 
 .nav__links .link a:hover {
     color: bisque;
-}
+/* }
  .btn{
     background-color: bisque;
     color: black;
@@ -63,7 +63,7 @@ body {
     cursor: pointer;
     transition: 0.3s;
 
- }
+ } */
 
 
 .menu-toggle {
